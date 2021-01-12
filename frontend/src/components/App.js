@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {render} from "react-dom";
 import HomePage from "./HomePage"
 
-
 // render this component inside div in index.html
 export default class App extends Component{
     constructor(props){
@@ -12,7 +11,13 @@ export default class App extends Component{
     // embeds JavaScript code into HTML text
     render(){
         return (
-          <div className="center">
+          <div 
+          style={{
+            position: 'absolute', 
+            left: '50%', top: '50%',
+            transform: 'translate(-50%, -50%)'
+          }}
+          >
             <HomePage />
           </div>
         );
