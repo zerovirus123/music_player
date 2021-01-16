@@ -20,7 +20,6 @@ export default class Room extends Component {
         this.renderSettings = this.renderSettings.bind(this);
     }
 
-
     //fetches Room details for a specific room code
     //then converts the detail to JSON
     //then sets the states in the front end to the JSON values
@@ -64,11 +63,12 @@ export default class Room extends Component {
         return (
         <Grid container spacing={1}>
             <Grid item xs={12} align="center">
-                <CreateRoomPage update={true} 
-                               votesToSkip={ this.state.votesToSkip}
-                               guestCanPause={ this.state.guestCanPause }>
-                               roomCode={ this.roomCode }
-                               updateCallback={() => {}}
+                <CreateRoomPage 
+                   update={true} 
+                   votesToSkip={ this.state.votesToSkip}
+                   guestCanPause={ this.state.guestCanPause }>
+                   roomCode={ this.roomCode }
+                   updateCallback={() => {}}
                 </CreateRoomPage>
             </Grid>
             <Grid item xs={12} align="center">
