@@ -18,7 +18,7 @@ export default class Room extends Component {
         this.updateShowSettings = this.updateShowSettings.bind(this);
         this.renderSettingsButton = this.renderSettingsButton.bind(this);
         this.renderSettings = this.renderSettings.bind(this);
-    }
+    }   
 
     //fetches Room details for a specific room code
     //then converts the detail to JSON
@@ -66,10 +66,9 @@ export default class Room extends Component {
                 <CreateRoomPage 
                    update={true} 
                    votesToSkip={ this.state.votesToSkip}
-                   guestCanPause={ this.state.guestCanPause }>
+                   guestCanPause={ this.state.guestCanPause }
                    roomCode={ this.roomCode }
-                   updateCallback={() => {}}
-                </CreateRoomPage>
+                   updateCallback={() => {}} />
             </Grid>
             <Grid item xs={12} align="center">
                <Button variant="contained" color="secondary" 
@@ -133,3 +132,4 @@ export default class Room extends Component {
         );
     }
 }
+
